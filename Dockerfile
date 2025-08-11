@@ -1,5 +1,5 @@
-FROM php:8.2-apache
+FROM php:8.0-apache
 
-RUN Docker-php-ext-install pdo pdo-mysql
+RUN a2enmod rewrite
 
-COPY . /src/var/www/html/
+COPY . var/www/html/
